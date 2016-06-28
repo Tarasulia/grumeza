@@ -1,0 +1,50 @@
+.navbar-default {
+    background-color: rgba(0,0,0, 0.4);
+    border:none;
+    padding-top: 50px;
+
+    .navbar-nav {
+        li {
+            padding-bottom: 15px;
+            a {
+                font-size: 20px;
+                line-height: 30px;
+                padding-top: 0;
+                padding-bottom: 0;
+                color: #fff;
+
+                &:hover,
+                &:focus {
+                    color: red;
+                    outline: none;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            width: 100%;
+            background-color:rgba(0,0,0, 0.4);
+        }
+
+        // Remove background color from open dropdown
+        > .open > a {
+            &,
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: red;
+            }
+        }
+
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: red;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,52 @@
+.site-footer {
+    @extend .text-center;
+    position: absolute;
+    padding: 40px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .site-info {
+        display: flex;
+        justify-content: center;
+        .social-link {
+            @include square(30px);
+            @include base-border-radius(15px);
+            @include transition(all 0.3s ease);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            border: 1px solid #fff;
+            font-size: 20px;
+            margin-right: 80px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            &:hover {
+                border-color: red;
+                cursor: pointer;
+                
+                i {
+                    color: red;
+                }
+            }
+            
+            a {
+                display: flex;
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+
+            i {
+                color: #fff;
+            }
+        }
+           
+    }
+}

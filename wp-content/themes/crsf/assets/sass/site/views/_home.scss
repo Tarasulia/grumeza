@@ -1,0 +1,33 @@
+body {
+    background: url('/wp-content/themes/crsf/img/home_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    @include RobotoReg();
+    min-height: 100%;
+    color: #fff;
+}
+
+html {
+    height: 100%;
+}
+body {
+
+}
+
+.home-bio {
+    color: #fff;
+    position: relative;
+    top: 100px;
+    background-color: rgba(0,0,0, 0.4);
+    padding: 20px;
+
+    h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 20px;
+    }
+}

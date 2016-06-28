@@ -1,0 +1,56 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+	@font-face {
+		font-family: $font-family;
+		src: url('#{$file-path}.ttf') format('truetype');
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		@font-face {
+			font-family: $font-family;
+			src: url('#{$file-path}.svg##{$font-family}') format('svg');
+		}
+	}
+}
+
+@include font-face(RobotoReg, 'assets/fonts/Roboto/Roboto-Regular', 400, normal);
+
+
+@mixin RobotoReg {
+	font-family: 'RobotoReg';
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin base-border-radius($radius) {
+	-moz-border-radius: unquote($radius);
+	-webkit-border-radius: unquote($radius);
+	border-radius: unquote($radius);
+}
+
+
